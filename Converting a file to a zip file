@@ -1,0 +1,12 @@
+import zipfile
+
+def create_zip(tex_file, zip_file):
+    with zipfile.ZipFile(zip_file, 'w') as zf:
+        zf.write(tex_file)
+
+if __name__ == "__main__":
+    tex_file = 'Editable_CV.tex'  # Replace with the name of your .tex file
+    zip_file = 'Editable_CV.zip'       # Replace with the desired .zip file name
+
+    create_zip(tex_file, zip_file)
+    print(f"{tex_file} converted to {zip_file} successfully.")
