@@ -1,0 +1,28 @@
+<html>
+<div class="whatsapp_link">
+                <button class ="whatsappButton" id = "wB"></button>
+</div>
+</html>
+
+<css>
+.whatsappButton {
+  background-image: url('images/whatsapp.png');
+  background-repeat: no-repeat;
+  background-position: left center; /* Adjust this value to position the image */
+  background-size: 60px;
+  border: none;
+  width: 60px ;
+  height: 60px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+</css>
+
+<js>
+document.getElementById("wB").addEventListener("click", function() {
+    var phoneNumber = "+918367348365"; // Replace with the desired phone number
+    var message = "Hello! This is a predefined message."; // Replace with your default message
+    var url = "https://api.whatsapp.com/send?phone=" + encodeURIComponent(phoneNumber) + "&text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+  });
+</js>
