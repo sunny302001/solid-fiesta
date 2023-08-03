@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+</head>
+<body>
+    <div>
+        <a href="https://www.facebook.com/YourPageLink" target="_blank">
+            <!-- Paste the Facebook Embedded Post code here -->
+            <div class="fb-post" data-href="https://www.facebook.com/YourPageLink/posts/YourPostID" data-show-text="true"></div>
+        </a>
+    </div>
+
+    <!-- Include the Facebook SDK JavaScript for embedded posts -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="YOUR_NONCE_VALUE"></script>
+</body>
+</html>
