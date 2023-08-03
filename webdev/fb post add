@@ -1,0 +1,49 @@
+To embed a Facebook post in a small area on your website that, when clicked, leads to the corresponding Facebook page, you can use Facebook's Embedded Posts feature. Follow these steps:
+
+1. Find the Facebook post you want to embed:
+   - Visit the Facebook post you wish to display on your website.
+   - Click on the three dots (...) in the top right corner of the post.
+   - Select "Embed" from the dropdown menu.
+
+2. Customize the embedded post:
+   - A pop-up window will appear with the post's embed code. You can customize the width, height, and other options as per your website's design.
+   - Choose the desired size for the embedded post.
+
+3. Copy the embed code:
+   - Copy the provided embed code by selecting it and using Ctrl+C (Windows) or Cmd+C (Mac).
+
+4. Add the embed code to your website:
+   - Open your HTML file or content management system (CMS) and find the area where you want to display the embedded post.
+   - Paste the copied embed code in that area using Ctrl+V (Windows) or Cmd+V (Mac).
+
+5. Add a link to the Facebook page:
+   - Surround the embedded post with an anchor tag (`<a>`) to create a link to the Facebook page.
+
+Here's how the code might look like:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+</head>
+<body>
+    <div>
+        <a href="https://www.facebook.com/YourPageLink" target="_blank">
+            <!-- Paste the Facebook Embedded Post code here -->
+            <div class="fb-post" data-href="https://www.facebook.com/YourPageLink/posts/YourPostID" data-show-text="true"></div>
+        </a>
+    </div>
+
+    <!-- Include the Facebook SDK JavaScript for embedded posts -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="YOUR_NONCE_VALUE"></script>
+</body>
+</html>
+```
+
+Replace `https://www.facebook.com/YourPageLink` with the link to your Facebook page, and `YourPostID` with the specific post's ID you want to embed.
+
+Remember to replace `YOUR_NONCE_VALUE` with a nonce value. Nonce is a random value used to protect against certain types of cyber attacks. You can generate a nonce value using a server-side script or use a JavaScript function to generate it.
+
+Now, when someone clicks on the embedded post on your website, they will be redirected to the corresponding Facebook page.
